@@ -11,7 +11,7 @@ gem 'rails', '~> 5.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'devise'
-gem 'foundation-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'gravatar-ultimate'
 gem 'xmlrpc'
 gem 'carrierwave', '~> 1.0'

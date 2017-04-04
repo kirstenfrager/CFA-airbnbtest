@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Book Now', new_booking_path(room_id: @room.id), class: 'btn btn-primary' %>
+
 <p>
   <strong>Title:</strong>
   <%= @room.title %>
@@ -7,7 +9,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @room.price %>
+  <%= number_to_currency(@room.price) %> per night
 </p>
 
 <p>
@@ -27,32 +29,32 @@
 
 <p>
   <strong>Pets:</strong>
-  <%= @room.pets %>
+  <%= yes_no(@room.pets) %>
 </p>
 
 <p>
   <strong>Smoking:</strong>
-  <%= @room.smoking %>
+  <%= yes_no(@room.smoking) %>
 </p>
 
 <p>
   <strong>Wifi:</strong>
-  <%= @room.wifi %>
+  <%= yes_no(@room.wifi) %>
 </p>
 
 <p>
   <strong>Bathrooms:</strong>
-  <%= @room.bathrooms %>
+  <%= yes_no(@room.bathrooms) %>
 </p>
 
 <p>
   <strong>Bath:</strong>
-  <%= @room.bath %>
+  <%= yes_no(@room.bath) %>
 </p>
 
 <p>
   <strong>Parties:</strong>
-  <%= @room.parties %>
+  <%= yes_no(@room.parties) %>
 </p>
 
 <p>
