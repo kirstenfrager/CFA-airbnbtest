@@ -3,17 +3,24 @@ require 'rails_helper'
 RSpec.describe Room, type: :model do
 
   it "room can save an image" do
-    image = file_fixture("myroom.jpg").open
+    user = User.create(:email => "me@cf.com")
+    room = Room.create(:user => user, :title => "my airbnb house")
+    room.pictures = [
+      file_fixture("myroom.jpg").open
+    ]
+    room.save!
+
+    expect(room.pictures.count).to eq(1)
   end
 
   it "room require a title" do
   	room = Room.create(:title => nil)
-	expect(room).to_not be_valid
+	  expect(room).to_not be_valid
   end
 
   it "room require a title of atleast 2 characters" do
   	room = Room.create(:title => "a")
-	expect(room).to_not be_valid
+	  expect(room).to_not be_valid
   end
 
   it "room require a title of atleast 2 characters" do

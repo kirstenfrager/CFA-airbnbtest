@@ -1,0 +1,11 @@
+Next Steps:
+- set amount as room price (to Stripe and to our confirmation page)
+- refactoring
+- field on booking to determine if paid
+- create a transaction to record transaction
+
+Transaction:
+- timestamp
+- amount
+- user_id (payee)
+- booking_id
