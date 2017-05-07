@@ -1,0 +1,5 @@
+peter:
+  email: <%= Faker::Internet.unique.email("peter") %>
+
+jamie:
+  email: jamie@coder.com

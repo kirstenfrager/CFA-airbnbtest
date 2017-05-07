@@ -17,7 +17,7 @@
       <tr>
         <td><%= booking.start_date %></td>
         <td><%= booking.end_date %></td>
-        <td><%= number_to_currency(booking.room.price) %></td>
+        <td><%= booking.room.price %></td>
         <td><%= booking.room.title %></td>
         <td><%= render 'partials/stripe', booking: booking %></td>
       </tr>
@@ -42,7 +42,7 @@
       <tr>
         <td><%= booking.start_date %></td>
         <td><%= booking.end_date %></td>
-        <td><%= number_to_currency(booking.room.price) %></td>
+        <td><%= booking.room.price %></td>
         <td><%= booking.room.title %></td>
         <td><%= render 'partials/stripe', booking: booking %></td>
       </tr>

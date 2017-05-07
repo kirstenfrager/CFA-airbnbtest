@@ -1,24 +1,13 @@
-# README
+# Airbnb Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails application used to try and recreate some of airbnb's features.
 
-Things you may want to cover:
+# Current Features Implemented
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - Post a Room for listing
+  - Carrierwave used to upload pictures for room being listed
+  - Creating a new Booking for a Room
+  - Having an "approval" boolean value for a Booking which belongs to the owner
+  - Host Dashboard displaying "my bookings" and "my rooms" and which bookings have bee approved or not
+  - Stripe Implementation
+  - Factory Girl and Rspec Tests

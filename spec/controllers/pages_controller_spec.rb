@@ -2,6 +2,22 @@ require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
 
+  describe "using fixtures" do
+
+    #tell rails which fixtures you are about to use
+    fixtures :users, :rooms, :bookings
+
+    it "user is valid" do
+      user = build(:user)
+
+      #creates a matching function for us and we can now call peter record
+      # user = users(:peter)
+      # room = rooms(:sydney)
+      # booking = bookings(:jamies_booking)
+  # require 'pry'; binding.pry
+    end
+  end
+
   describe "GET #guest_dashboard" do
     # before :each do
     #   user = User.create(:email => "test@test.com")

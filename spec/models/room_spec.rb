@@ -15,17 +15,19 @@ RSpec.describe Room, type: :model do
 
   it "room require a title" do
   	room = Room.create(:title => nil)
-	  expect(room).to_not be_valid
+	expect(room).to_not be_valid
   end
 
-  it "room require a title of atleast 2 characters" do
+  it "room require a title of at least 2 characters" do
   	room = Room.create(:title => "a")
-	  expect(room).to_not be_valid
+	expect(room).to_not be_valid
   end
 
   it "room require a title of atleast 2 characters" do
     user = User.create(:email => "test@test.com", :password => "12345678")
-  	room = Room.create(:title => "ab", :user_id => 1)
+    room = build(:room, :user => user)
+# require 'pry'; binding.pry
+  	# room = Room.create(:title => "ab", :user => user, :description => "room")
 	expect(room).to be_valid
   end
 end
